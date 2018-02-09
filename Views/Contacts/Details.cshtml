@@ -11,6 +11,10 @@
   <p><u>Phone Number:</u> @Model.GetPhoneNumber()</p>
   <p><u>Address:</u> @Model.GetAddress()</p>
 
-  <h5><a href="/contacts">Return to All Contacts</a></h5>
+  <form action="/contacts/delete" method="post">
+    <input name="contactId" type="hidden" value="@Model.GetId()">
+    <button type="submit" class="btn btn-danger">Delete This Contact</button>
+  </form>
+  <h5><a href="/">Return to All Contacts</a></h5>
   <h5><a href="/contacts/new">Make A New Contact</a></h5>
 </div>

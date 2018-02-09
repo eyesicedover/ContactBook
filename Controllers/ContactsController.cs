@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using ContactBook.Models;
 
@@ -7,14 +7,14 @@ namespace ContactBook.Controllers
 {
     public class ContactsController : Controller
     {
-      [HttpGet("/contacts")]
+      [HttpGet("/")]
       public ActionResult Index()
       {
         List<Contact> allContacts = Contact.GetAll();
         return View(allContacts);
       }
 
-      [HttpPost("/contacts")]
+      [HttpPost("/")]
       public ActionResult Create()
       {
           string firstName = Request.Form["firstName"];
@@ -55,6 +55,16 @@ namespace ContactBook.Controllers
       public ActionResult Clear()
       {
           Contact.ClearAll();
+          List<Contact> allContacts = Contact.GetAll();
+          return View("Index", allContacts);
+      }
+
+      [HttpPost("/contacts/delete")]
+      public ActionResult Delete()
+      {
+          int contactId = Int32.Parse(Request.Form["contactId"]);
+          Contact.DeleteThisContact(contactId);
+          Contact.ReassignIds();
           List<Contact> allContacts = Contact.GetAll();
           return View("Index", allContacts);
       }

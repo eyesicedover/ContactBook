@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace ContactBook.Models
 {
@@ -72,6 +73,19 @@ namespace ContactBook.Models
         public static void ClearAll()
         {
             _instances.Clear();
+        }
+
+        public static void DeleteThisContact(int id)
+        {
+            _instances.RemoveAt(id-1);
+        }
+
+        public static void ReassignIds()
+        {
+            for (int index = 0; index < _instances.Count; index++)
+            {
+              _instances[index]._id = index + 1;
+            }
         }
     }
 }
