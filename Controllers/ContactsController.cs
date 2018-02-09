@@ -17,10 +17,23 @@ namespace ContactBook.Controllers
       [HttpPost("/contacts")]
       public ActionResult Create()
       {
-          string name = Request.Form["name"];
+          string firstName = Request.Form["firstName"];
+          string lastName = Request.Form["lastName"];
+          lastName = " " + lastName.Trim();
+          string fullName = string.Concat(firstName, lastName);
+
           string phone = Request.Form["phone"];
+
           string address = Request.Form["address"];
-          Contact newContact = new Contact(name, phone, address);
+          string city = Request.Form["city"];
+          string state = Request.Form["state"];
+          string zip = Request.Form["zip"];
+          city = ", " + city.Trim();
+          state = ", " + state.Trim();
+          zip = " " + zip.Trim();
+          string fullAddress = string.Concat(string.Concat(string.Concat(address, city), state), zip);
+
+          Contact newContact = new Contact(fullName, phone, fullAddress);
           List<Contact> allContacts = Contact.GetAll();
           return View("Index", allContacts);
       }
