@@ -1,0 +1,16 @@
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  background: radial-gradient(ellipse at center, #c5deea 0%,#8abbd7 33%,#066dab 100%);
+}
+
+.jumbotron {
+  background-color: #E9DCCD;
+}
+
+.well {
+  background-color: #F0E9E1;
+}

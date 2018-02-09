@@ -7,14 +7,16 @@
 </div>
 <div class="well text-center">
   <h3>Add A Contact</h3><br>
-  <form action="/contacts" method="post">
-    <label for="name">Enter Contact Name</label>
-    <input type="text" name="name" id="name">
-    <label for="phone">Enter Contact Phone Number</label>
-    <input type="text" name="phone" id="phone">
-    <label for="address">Enter Contact Address</label>
-    <input type="text" name="address" id="address">
-    <button type="submit" class="btn btn-success">Add Contact</button>
-  </form>
+  <div class="form-group">
+    <form action="/contacts" method="post">
+      <label for="name">Enter Contact Name</label>
+      <input type="text" name="name" id="name" class="form-control">
+      <label for="phone">Enter Contact Phone Number</label>
+      <input type="text" name="phone" id="phone" class="form-control">
+      <label for="address">Enter Contact Address</label>
+      <input type="text" name="address" id="address" class="form-control">
+      <button type="submit" class="btn btn-success">Add Contact</button>
+    </form>
+  </div>
   <h4><a href="/contacts">Return to All Contacts</a></h4>
 </div>
