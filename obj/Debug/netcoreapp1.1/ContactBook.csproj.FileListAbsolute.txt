@@ -1,0 +1,8 @@
+/Users/Guest/Desktop/ContactBook/bin/Debug/netcoreapp1.1/ContactBook.deps.json
+/Users/Guest/Desktop/ContactBook/bin/Debug/netcoreapp1.1/ContactBook.runtimeconfig.json
+/Users/Guest/Desktop/ContactBook/bin/Debug/netcoreapp1.1/ContactBook.runtimeconfig.dev.json
+/Users/Guest/Desktop/ContactBook/bin/Debug/netcoreapp1.1/ContactBook.dll
+/Users/Guest/Desktop/ContactBook/bin/Debug/netcoreapp1.1/ContactBook.pdb
+/Users/Guest/Desktop/ContactBook/obj/Debug/netcoreapp1.1/ContactBook.AssemblyInfo.cs
+/Users/Guest/Desktop/ContactBook/obj/Debug/netcoreapp1.1/ContactBook.dll
+/Users/Guest/Desktop/ContactBook/obj/Debug/netcoreapp1.1/ContactBook.pdb

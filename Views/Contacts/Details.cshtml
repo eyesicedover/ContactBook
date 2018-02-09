@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="jumbotron text-center">
+  <h1>Address Book</h1>
+</div>
+<div class="well text-center">
+  <h3>Contact Detail</h3><br>
+  <p><u>Name:</u> @Model.GetName()</p>
+  <p><u>Phone Number:</u> @Model.GetPhoneNumber()</p>
+  <p><u>Address:</u> @Model.GetAddress()</p>
+
+  <h4><a href="/contacts">Return to All Contacts</a></h4>
+  <h4><a href="/contacts/new">Make A New Contact</a></h4>
+</div>
