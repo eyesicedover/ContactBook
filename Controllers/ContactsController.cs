@@ -7,14 +7,14 @@ namespace ContactBook.Controllers
 {
     public class ContactsController : Controller
     {
-      [HttpGet("/")]
+      [HttpGet("/contacts")]
       public ActionResult Index()
       {
         List<Contact> allContacts = Contact.GetAll();
         return View(allContacts);
       }
 
-      [HttpPost("/")]
+      [HttpPost("/contacts")]
       public ActionResult Create()
       {
           string firstName = Request.Form["firstName"];
